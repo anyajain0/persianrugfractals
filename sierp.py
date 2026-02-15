@@ -1,8 +1,6 @@
 import turtle
 import math
 
-#inner_border method should be in this file
-
 def sierpy(t, radius, depth, n, x, y, flip=False):
     if depth == 0:
         t.penup()
@@ -46,3 +44,27 @@ def border(t, depth, n):
     while a > -275:   
         sierpy(t, 20, depth, n, a, b, flip=False)
         a-=50
+
+def inner_border(t, depth, n):
+    t.penup()
+    t.goto(-250, -350)
+    t.setheading(0)
+    t.pendown()
+    a= -200-30
+    b=-300
+    while b < 300:
+        sierpy(t, 20, depth, n, a, b)
+        b+=50
+    t.right(90)
+    while a < 200:
+        sierpy(t, 20, depth, n, a, b)
+        a+=50
+    t.right(90)
+    while b > -300:   
+        sierpy(t, 20, depth, n, a, b, flip=True)
+        b-=50
+    t.right(90)
+    while a > -225:   
+        sierpy(t, 20, depth, n, a, b, flip=False)
+        a-=50
+
