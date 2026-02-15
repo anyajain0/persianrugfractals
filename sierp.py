@@ -1,6 +1,8 @@
 import turtle
 import math
 
+#inner_border method should be in this file
+
 def sierpy(t, radius, depth, n, x, y, flip=False):
     if depth == 0:
         t.penup()
