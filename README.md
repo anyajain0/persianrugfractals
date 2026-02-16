@@ -1,5 +1,6 @@
 # persianrugfractals
 Python Graphics project using tkinter and turtle libraries.
+Math concepts: basic fractals, polar coordinates, trig
 
 NOTES: 
 
